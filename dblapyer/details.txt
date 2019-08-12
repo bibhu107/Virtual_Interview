@@ -1,1 +1,0 @@
-foldder to keep all functions that interacts with DB

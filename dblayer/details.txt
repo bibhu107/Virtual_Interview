@@ -1,0 +1,7 @@
+folder to keep all functions that interacts with DB
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+Follow this link to install MySql in your system and
+Use password as : "Password-1"
+
+follow this link to use mysql in a better way
+https://www.pantz.org/software/mysql/mysqlcommands.html
