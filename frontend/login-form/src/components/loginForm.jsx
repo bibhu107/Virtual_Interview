@@ -11,6 +11,7 @@ import {
 
 class Login extends Component {
     render() {
+      const {email,password} = this.state
         return (
             <Container className="App">
             <div class = "_0c4ed431">
@@ -22,7 +23,7 @@ class Login extends Component {
 
             </div>
         <h2>Sign In</h2>
-        <Form className="form">
+        <Form onSubmit={this.handleSubmit} className="form">
           <Col>
             <FormGroup>
               <Label>Email</Label>
@@ -33,6 +34,7 @@ class Login extends Component {
                 id="Email"
                 placeholder="Enter username"
                 onChange={this.handleChange}
+                value={email}
               />
               <div class="valid-feedback">Valid username.</div>
             </FormGroup>
@@ -46,11 +48,13 @@ class Login extends Component {
                 id="Password"
                 class="form-control is-invalid"
                 placeholder="Enter password"
+                onChange = {this.handleChange}
+                value={password}
               />
                <div class="invalid-feedback">Please fill out this field.</div>
             </FormGroup>
           </Col>
-          <Button>Submit</Button>
+          <Button type= "Submit">Submit</Button>
         </Form>
       </Container>
         );
