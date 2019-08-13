@@ -2,22 +2,38 @@ import React, {Component} from 'react';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import "./App.css";
+
 import {
     Container, Col, Form,
     FormGroup, Label, Input,
     Button
   } from 'reactstrap';
-  import "bootstrap/dist/css/bootstrap.min.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 import Login from './components/loginForm';
 class App extends Component {
     render() {
+        const EmailStyle = {
+            paddingTop:180,
+            padingLeft:180,
+            width:300,
+         
+                backgroundImage: "url(" + "./background.jpg" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            
+          };
+        const width ={
+            padingLeft:180,
+            width:300
+        }
         const {email,password} = this.state
         return (
-            <Container className = "App">
-                    <Form onSubmit={this.handleSubmit} className="form">
-                    <div class="form-group">
+            <Container className = "App" >
+                    <Form onSubmit={this.handleSubmit} className="form"   >
+                    <div class="form-group" style={EmailStyle} >
                          <input 
                             type="email" 
                             class="form-control"
@@ -29,7 +45,7 @@ class App extends Component {
                         >
                         </input>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style={width}>
                         <input 
                             type="password" 
                             class="form-control" 
@@ -46,7 +62,7 @@ class App extends Component {
                         <label>
                              Remember me
                         </label>
-                    </div>
+                    </div >
                     <button 
                         type="submit" 
                         class="btn btn-primary">Login
@@ -54,7 +70,7 @@ class App extends Component {
                     <button 
                         type="Register" 
                         class="btn btn-primary">Register
-                        
+
                     </button>
                 </Form>    
             </Container>

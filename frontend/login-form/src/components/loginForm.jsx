@@ -13,50 +13,49 @@ class Login extends Component {
     render() {
       const {email,password} = this.state
         return (
-            <Container className="App">
-            <div class = "_0c4ed431">
-                <div class = "bac87ec6 ">
-                        <div class = "_83938fda">
+          <Container className = "App" >
+                    <Form onSubmit={this.handleSubmit} className="form" >
+                    <div class="form-group">
+                         <input 
+                            type="email" 
+                            class="form-control"
+                            placeholder="Email"
+                            name="email"
+                            value={email}
+                            onChange={this.handleChange}
+                           
+                        >
+                        </input>
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            placeholder="Password"
+                            name="password"
+                            value={password}
+                            onChange={this.handleChange}
                             
-                        </div>
-                </div>
-
-            </div>
-        <h2>Sign In</h2>
-        <Form onSubmit={this.handleSubmit} className="form">
-          <Col>
-            <FormGroup>
-              <Label>Email</Label>
-              <Input
-                type="email"
-                name="email"
-                class="form-control is-valid"
-                id="Email"
-                placeholder="Enter username"
-                onChange={this.handleChange}
-                value={email}
-              />
-              <div class="valid-feedback">Valid username.</div>
-            </FormGroup>
-          </Col>
-          <Col>
-            <FormGroup>
-              <Label for="examplePassword">Password</Label>
-              <Input
-                type="password"
-                name="password"
-                id="Password"
-                class="form-control is-invalid"
-                placeholder="Enter password"
-                onChange = {this.handleChange}
-                value={password}
-              />
-               <div class="invalid-feedback">Please fill out this field.</div>
-            </FormGroup>
-          </Col>
-          <Button type= "Submit">Submit</Button>
-        </Form>
-      </Container>
+                           >
+                        </input>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox"></input>
+                        <label>
+                             Remember me
+                        </label>
+                    </div>
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary">Login
+                    </button>
+                    <button 
+                        type="Register" 
+                        class="btn btn-primary">Register
+                        
+                    </button>
+                </Form>    
+            </Container>
         );
       }
 }

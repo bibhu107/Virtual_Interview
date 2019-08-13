@@ -1,0 +1,12 @@
+.row.row-margins {
+    padding-top: 70px; /* or margin-top: 7px; */
+    padding-bottom: 7px; /* or margin-bottom: 7px; */
+  }
+  .row.row-margins > *[class^="col"] {
+    margin-top: 80px;
+    margin-bottom: 8px;
+
+  }
+  .Login{
+      align-self: center;
+  }
